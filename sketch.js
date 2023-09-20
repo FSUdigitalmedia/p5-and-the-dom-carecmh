@@ -24,6 +24,7 @@ function mouseClicked(){
 
 function draw() {
   myParagraph.position(frameCount % 200, 0);
+  loop()
   myParagraph.size(slider.value())
 }
 
