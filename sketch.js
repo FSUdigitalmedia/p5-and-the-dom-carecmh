@@ -1,31 +1,35 @@
-var myParagraph
+var myParagraph;
 var button;
+var slider
 
 function setup() {
   myParagraph = createP("html");
   myParagraph.position(0, 0);
+  loop()
   button = createButton("Go!")
-  button.mouseClicked(makeRed);
-  
+  button.position (100, 150);
+  button.mouseClicked(changeColor);
+  slider = createSlider(10, 100, 20);
 }
 
+function changeColor() {
+   myParagraph = color(random, (255))
+}
 
-function mouseClicked() {
+function mouseClicked(){
    myParagraph.html ("Sup!")
    myParagraph.style("color", "red");
 }
 
+
 function draw() {
   myParagraph.position(frameCount % 200, 0);
+  myParagraph.style(slider.value())
 }
 
 
 
 
-
-function loop() {
-   
-}
 
 
 /*
